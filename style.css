@@ -33,6 +33,10 @@ header {
     text-align: center;
 }
 
+.hamburger {
+  display: none;
+}
+
 .navbar {
     display: flex;
     justify-content: center;
@@ -503,6 +507,8 @@ sectionTitle p {
 }
 
 .subscribe-button {
+  position: relative;
+  display: inline-block;
   margin-top: 16px;
   background-color: transparent;
   border: none;
@@ -511,6 +517,25 @@ sectionTitle p {
   font-weight:normal;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
+}
+
+.subscribe-button::before,
+.subscribe-button::after {
+  content: "----------";
+  color: #ffffff;
+  font-size: 36px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: monospace;
+}
+
+.subscribe-button::before {
+  left: -230px;
+}
+
+.subscribe-button::after {
+  right: -230px;
 }
 
 .subscribe-button:hover {
@@ -534,4 +559,218 @@ sectionTitle p {
 
 .footer p{
     line-height: 1.2;
+}
+
+
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    padding: 24px 12px;
+  }
+
+  .logo {
+    font-size: 48px;
+  }
+
+  .navlink {
+    gap: 64px;
+  }
+
+  .navlink li a {
+    font-size: 20px;
+  }
+
+  .slide-caption {
+    font-size: 32px;
+  }
+
+  .text-content {
+    font-size: 14px;
+    top: 10%;
+  }
+
+  .terminal-box {
+    font-size: 14px;
+  }
+
+  .runkit-header {
+    font-size: 32px;
+    gap: 6px;
+  }
+
+  .runkit-body {
+    padding: 0 32px;
+    max-width: 80%;
+  }
+
+  .runkit-body .runkit-link a {
+    font-size: 20px;
+  }
+
+  .tool-line {
+    font-size: 28px;
+    height: 64px;
+    max-width: 90%;
+  }
+
+  .whoNode-content {
+    height: 64px;
+    max-width: 80%;
+  }
+
+  .whoNode-content p {
+    font-size: 18px;
+  }
+
+  .subscribe h2 {
+    font-size: 32px;
+  }
+
+  .subscribe p {
+    font-size: 20px;
+  }
+
+  .subscribe-form input[type="email"] {
+    font-size: 20px;
+    width: 260px;
+  }
+
+  .subscribe-button {
+    font-size: 28px;
+  }
+
+  .subscribe-button::before,
+  .subscribe-button::after {
+    font-size: 28px;
+    left: -180px;
+    right: -180px;
+  }
+
+  .footer-end {
+    font-size: 20px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navlink {
+    display: none;
+    flex-direction: column;
+    background-color: #11161c;
+    padding: 16px;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .navlink.active {
+    display: flex;
+  }
+
+  .navlink li a {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 40px;
+  }
+
+  .slide-caption {
+    font-size: 24px;
+    bottom: 32px;
+  }
+
+  .text-content {
+    font-size: 12px;
+    padding: 8px;
+    max-width: 100%;
+    top: 8%;
+  }
+
+  .terminal-box {
+    font-size: 12px;
+  }
+
+  .guide p {
+    font-size: 14px;
+  }
+
+  .runkit-header {
+    font-size: 28px;
+    gap: 6px;
+    padding: 0 8px;
+  }
+
+  .runkit-body {
+    padding: 0 16px;
+    max-width: 100%;
+  }
+
+  .runkit-body .runkit-link a {
+    font-size: 18px;
+  }
+
+  .tool-line {
+    font-size: 24px;
+    height: 60px;
+    max-width: 100%;
+  }
+
+  .tool-line a.file-link {
+    font-size: 24px;
+  }
+
+  .whoNode-content {
+    height: auto;
+    max-width: 100%;
+    padding: 8px;
+    flex-direction: column;
+  }
+
+  .whoNode-content p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .subscribe h2 {
+    font-size: 28px;
+  }
+
+  .subscribe p {
+    font-size: 18px;
+  }
+
+  .subscribe-form input[type="email"] {
+    font-size: 18px;
+    width: 220px;
+  }
+
+  .subscribe-button {
+    font-size: 24px;
+  }
+
+  .subscribe-button::before,
+  .subscribe-button::after {
+    font-size: 24px;
+    left: -120px;
+    right: -120px;
+  }
+
+  .footer-end {
+    font-size: 18px;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
 }
