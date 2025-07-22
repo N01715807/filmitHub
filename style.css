@@ -88,8 +88,8 @@ sectionTitle p {
 
 .dividing-line {
   display: block;
-  margin-top: 48px;
-  margin-bottom: 24px;
+  margin-top: 28px;
+  margin-bottom: 28px;
     font-size: 16px;
     color: #ffffff;
     letter-spacing: 0.05em;
@@ -565,21 +565,94 @@ sectionTitle p {
 
 /* Tablet view */
 @media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.3px;
+    word-break: break-word;
+}
+
   header {
-    padding: 24px 12px;
+    padding: 24px 32px;
+    text-align: center;
   }
 
-  .logo {
+.hamburger {
+  display: none;
+}
+
+.navbar {
+    margin-bottom: 48px;
+}
+
+.navlink {
+    gap: 104px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navlink li a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+sectionTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+sectionTitle h1 {
+  margin: 0;
+}
+
+.logo {
+  margin-top: 0;
+  margin-bottom: 0;
     font-size: 48px;
-  }
+    color: #00fbfe;
+    display: flex;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    align-items: center;
+    justify-content: center;
+}
 
-  .navlink {
-    gap: 64px;
-  }
+sectionTitle p {
+  margin: 0;
+}
 
-  .navlink li a {
-    font-size: 20px;
-  }
+.dividing-line {
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 24px;
+    font-size: 16px;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+}
+
+.banner {
+  margin-bottom: 56px;
+  position: relative;
+  height: min(600px, 90vh);
+  overflow: hidden;
+}
+
+.slide {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
   .slide-caption {
     font-size: 32px;
