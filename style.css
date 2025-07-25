@@ -210,6 +210,10 @@ sectionTitle p {
   opacity: 1;
 }
 
+.phoneBanner-content{
+  display: none;
+}
+
 /* ===== Guide ===== */
 .guide {
     margin-top: 80px;
@@ -270,9 +274,17 @@ sectionTitle p {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  font-size: 40px;
+  font-size: clamp(24px, calc(100vw * 36/ 1912), 40px);
   line-height: 1.2;
   margin: 0px;
+}
+
+.phoneRunkit-header {
+  display: none;
+}
+
+.tableRunkit-header {
+  display: none;
 }
 
 .runkit-header span{
@@ -343,6 +355,7 @@ sectionTitle p {
   height: 72px;
   width: 100%;
   max-width: 80%;
+  box-sizing: border-box;
 }
 
 .left-bar {
@@ -364,13 +377,13 @@ sectionTitle p {
   font-size: clamp(20px, calc(100vw * 32 / 1479), 36px);
 }
 
-.tool-line a.file-link:hover {
-  color: #ffffff;
-}
-
 .tool-line span:last-child {
   color: #ffffff;
   font-size: clamp(20px, calc(100vw * 32 / 1479), 36px);
+}
+
+.tool-line a.file-link:hover {
+  color: #ffffff;
 }
 
 /* ===== who.node ===== */
@@ -379,10 +392,19 @@ sectionTitle p {
 }
 
 .dividing-line #lineup {
+  margin-right: 16px;
   margin-left: 16px;
   text-align: left;
-  font-size: 24px;
+  font-size: clamp(16px, calc(100vw * 24/ 1912), 24px);
   display: block;
+}
+
+.dividing-line #tablelineup {
+  display: none;
+}
+
+.dividing-line #phonelineup {
+  display: none;
 }
 
 .whoNode-title {
@@ -428,7 +450,7 @@ sectionTitle p {
 
 .whoNode-body {
   text-align: center;
-  margin: 40px auto;
+  margin: 40px 16px;
   font-size: 24px;
   line-height: 1.2;
 }
@@ -439,7 +461,7 @@ sectionTitle p {
   align-items: center;
   background-color: #414549;
   font-size: 24px;
-  margin: 32px auto; 
+  margin: 24px auto; 
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -462,15 +484,26 @@ sectionTitle p {
 .dividing-line #linedown {
   margin-top: 64px;
   margin-right: 16px;
-  font-size: 24px;
+  margin-left: 16px;
+  font-size: clamp(16px, calc(100vw * 24/ 1912), 24px);
   display: block;
   text-align: right;
+}
+
+.dividing-line #tablelinedown {
+  display: none;
+}
+
+.dividing-line #phonelinedown {
+  display: none;
 }
 
 /* ===== Subscribe 区块 ===== */
 
 .subscribe {
   margin-top: 216px;
+  margin-left: 16px;
+  margin-right: 16px;
   text-align: center;
 }
 
@@ -550,6 +583,9 @@ sectionTitle p {
 /* ===== Footer ===== */
 .footer {
     margin-top: 216px;
+    margin-bottom: 64px;
+    margin-left: 16px;
+    margin-right: 16px;
     text-align: center;
     color: #ffffff;
     font-size: 12px;
@@ -643,7 +679,7 @@ sectionTitle p {
 .banner {
   margin-bottom: 64px;
   position: relative;
-  height: min(450px, 80vh);
+  height: min(450px, 85vh);
   overflow: hidden;
 }
 
@@ -692,6 +728,10 @@ sectionTitle p {
   border-radius: 50%;
 }
 
+.phoneBanner-content{
+  display: none;
+}
+
 .guide {
     margin-top: 64px !important;
     margin-bottom: 64px !important;
@@ -703,12 +743,36 @@ sectionTitle p {
 }
 
 .runkit-header {
-  padding: 0 24px;
+  display: none;
+}
+
+.phoneRunkit-header {
+  display: none;
+}
+
+.tableRunkit-header h2 {
+  margin: 0px;
+}
+
+.tableRunkit-header {
+  padding: 0 16px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 6px;
-  font-size: 24px;
+  font-size: clamp(16px, calc(100vw * 24 / 1023), 24px);
+}
+
+.tableRunkit-header a {
+  color: #00fbfe;
+  font-weight:bold;
+  text-decoration: underline;
+}
+
+.tablerun-kit:hover {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .runkit-body {
@@ -771,8 +835,19 @@ sectionTitle p {
 }
 
 .dividing-line #lineup {
-  margin-left: 24px;
-  font-size: 20px;
+  display: none;
+}
+
+.dividing-line #tablelineup {
+  display: block;
+  margin-right: 16px;
+  margin-left: 16px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.dividing-line #phonelineup {
+  display: none;
 }
 
 .whoNode-title {
@@ -800,14 +875,14 @@ sectionTitle p {
 }
 
 .whoNode-body {
-  margin: 24px auto;
+  margin: auto 24px;
   font-size: 16px;
   line-height: 1.2;
 }
 
 .whoNode-line {
   font-size: 16px;
-  margin: 24px auto; 
+  margin: 16px auto; 
 }
 
 .whoNode-link {
@@ -819,9 +894,20 @@ sectionTitle p {
 }
 
 .dividing-line #linedown {
+  display: none;
+}
+
+.dividing-line #tablelinedown {
   margin-top: 24px;
-  margin-right: 24px;
-  font-size: 20px;
+  margin-right: 16px;
+  margin-left: 16px;
+  font-size: 16px;
+  display: block;
+  text-align: right;
+}
+
+.dividing-line #phonelinedown {
+  display: none;
 }
 
 .subscribe {
@@ -864,6 +950,9 @@ sectionTitle p {
 
 .footer {
     margin-top: 128px;
+    margin-bottom: 48px;
+    margin-left: 16px;
+    margin-right: 16px;
     font-size: 12px;
 }
 
@@ -875,8 +964,24 @@ sectionTitle p {
 
 /* Mobile view */
 @media (max-width: 767px) {
+  header {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
   .hamburger {
     display: block;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    font-size: 24px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 
   .navbar {
@@ -902,96 +1007,337 @@ sectionTitle p {
     text-align: center;
   }
 
-  .logo {
-    font-size: 40px;
-  }
 
-  .slide-caption {
+sectionTitle h1 {
+  margin: 0;
+}
+
+.logo {
     font-size: 24px;
-    bottom: 32px;
-  }
+}
 
-  .text-content {
-    font-size: 12px;
-    padding: 8px;
-    max-width: 100%;
-    top: 8%;
-  }
-
-  .terminal-box {
-    font-size: 12px;
-  }
-
-  .guide p {
+.dividing-line {
+  margin-top: 16px;
+  margin-bottom: 24px;
     font-size: 14px;
-  }
+    letter-spacing: 0.05em;
+}
 
-  .runkit-header {
-    font-size: 28px;
-    gap: 6px;
-    padding: 0 8px;
-  }
+.banner {
+  margin-bottom: 24px;
+  position: relative;
+  height: min(240px, 80vh);
+  overflow: hidden;
+}
 
-  .runkit-body {
-    padding: 0 16px;
-    max-width: 100%;
-  }
+.text-content {
+  display: none;
+}
 
-  .runkit-body .runkit-link a {
-    font-size: 18px;
-  }
+.slide-caption {
+  bottom: 8px;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
 
-  .tool-line {
-    font-size: 24px;
-    height: 60px;
-    max-width: 100%;
-  }
+.dots {
+  bottom: 8px;
+  gap: 8px;
+}
 
-  .tool-line a.file-link {
-    font-size: 24px;
-  }
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
 
-  .whoNode-content {
-    height: auto;
-    max-width: 100%;
-    padding: 8px;
-    flex-direction: column;
-  }
+.phoneBanner-content{
+  display: block;
+}
 
-  .whoNode-content p {
+.phoneTerminal-box {
+  padding: 0px 16px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+#phoneRunlogFeed {
+  font-size: 14px;
+  color: #00FBFE;
+  display: inline-block;
+}
+
+#phoneCursor {
+  display: inline-block;
+  font-size: 14px;
+  color: #00FBFE;
+  animation: blink 1s steps(2, start) infinite;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+.guide {
+    margin-top: 56px !important;
+    margin-bottom: 56px !important;
+}
+
+.guide p {
+  margin: 0px;
+  font-size: 16px;
+}
+
+.runkit-header {
+  display: none;
+}
+
+.tableRunkit-header {
+  display: none;
+}
+
+.phoneRunkit-header h2 {
+  margin: 0px;
+}
+
+.phoneRunkit-header {
+  padding:0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+  margin: 0px;
+}
+
+.phoneRunkit-header span{
+  font-weight: normal;
+}
+
+.phoneRunkit-header a {
+  color: #00fbfe;
+  font-weight:normal;
+  text-decoration: underline;
+}
+
+.phoneRun-kit:hover{
+  color: #ffffff;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.runkit-body {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  gap: 4px;
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+.runkit-body p {
+  margin: 4px 0;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.runkit-body .runkit-link a {
+  margin: 4px 0;
+  font-size: 20px;
+}
+
+.runkit-body .runkit-link a:hover{
+  margin: 4px 0;
+  font-size: 20px;
+}
+
+.runkit-tools {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  padding: 0px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.tool-line {
+  background-color: #414549;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: clamp(12px, calc(100vw * 0.05), 20px);
+  padding: 8px 16px;
+  height: 112px;
+  width: 100%;
+  max-width: 80%;
+  border-top: 12px solid #00fbfe;
+  box-sizing: border-box;
+}
+
+.left-bar {
+  display: none !important;
+}
+
+.space {
+  display: none;
+}
+
+.tool-file {
+  margin: 0px;
+}
+
+.tool-line a.file-link {
+  color: #00fbfe;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: clamp(12px, calc(100vw * 0.05), 20px);
+}
+
+.tool-line span:last-child {
+  color: #ffffff;
+  font-size: clamp(12px, calc(100vw * 0.05), 20px);
+}
+
+.whoNode {
+  margin-top: 112px;
+}
+
+.dividing-line #lineup {
+  display: none;
+}
+
+.dividing-line #tablelineup {
+  display: none;
+}
+
+.dividing-line #phonelineup {
+  display: block;
+  margin-right: 16px;
+  margin-left: 16px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.whoNode-title {
+  margin-top: 16px;
+}
+
+.whoNode-content {
+  height: 40px;
+  max-width: 60%;
+  width: 100%;
+}
+
+.whoNode-content p {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.whoNode-content-text {
+  padding: 8px 12px;
+}
+
+.right-bar {
+  width: 8px;
+  height: 100%;
+}
+
+.whoNode-body {
+  margin: auto 32px;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.whoNode-line {
+  font-size: 14px;
+  margin: 8px auto; 
+}
+
+.whoNode-link {
+  font-size: 16px;
+}
+
+.whoNode-link:hover {
+  font-size: 16px;
+}
+
+.dividing-line #linedown {
+  display: none;
+}
+
+.dividing-line #tablelinedown {
+  display: none;
+}
+
+.dividing-line #phonelinedown {
+  margin-top: 16px;
+  margin-right: 16px;
+  margin-left: 16px;
+  font-size: 16px;
+  display: block;
+  text-align: right;
+}
+
+.subscribe {
+  margin-top: 112px;
+}
+
+.subscribe h2 {
+  font-size: 20px;
+}
+
+.subscribe p {
+  margin: 4px 0;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.subscribe-form input[type="email"] {
     font-size: 16px;
-    text-align: center;
-  }
-
-  .subscribe h2 {
-    font-size: 28px;
-  }
-
-  .subscribe p {
-    font-size: 18px;
-  }
-
-  .subscribe-form input[type="email"] {
-    font-size: 18px;
-    width: 220px;
+    width: 200px;
+    padding: 6px 8px;
   }
 
   .subscribe-button {
-    font-size: 24px;
+    margin-top: 10px;
+    font-size: 18px;
   }
 
   .subscribe-button::before,
   .subscribe-button::after {
-    font-size: 24px;
-    left: -120px;
-    right: -120px;
-  }
-
-  .footer-end {
     font-size: 18px;
   }
 
-  .footer p {
-    font-size: 12px;
+  .subscribe-button::before {
+    left: -100px;
   }
+
+  .subscribe-button::after {
+    right: -100px;
+  }
+
+.footer {
+    margin-top: 112px;
+    margin-bottom: 32px;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 12px;
+}
+
+.footer-end {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
 }
